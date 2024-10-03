@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&family=Titillium+Web:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="page.css">
+    <title>Mr Clothing</title>
+
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MQZ5PWVQ');</script>
+  <!-- End Google Tag Manager -->
+
+    <script>
+      // Existing Functions with Data Layer Parameters
+      function trackPageView() {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+          'event': 'pageview',
+          'page_url': window.location.href,
+          'page_title': document.title,
+          'user_id': 'USER1234', // Placeholder user ID
+          'event_category': 'Page Interaction',
+          'event_label': 'Page View'
+        });
+      }
+
+      function viewCon() {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+          'event': 'view_content',
+          'content_name': 'Office Wears',
+          'page_url': window.location.href,
+          'user_id': 'USER1234',
+          'event_category': 'Product Interaction',
+          'event_label': 'View Content'
+        });
+      }
+
+      function AddToCart() {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+          'event': 'add_to_cart',
+          'product_name': 'Shoes',
+          'product_id': 'S123',
+          'value': 59.99,
+          'currency': 'USD',
+          'event_category': 'Ecommerce',
+          'event_label': 'Add to Cart',
+          'user_id': 'USER1234',
+          'page_url': window.location.href
+        });
+      }
+
+      function trackPurchase() {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+          'event': 'purchase',
+          'transaction_id': 'T12345',
+          'value': 59.99,
+          'currency': 'USD',
+          'order_quantity': 1,
+          'items': [
+            {
+              'item_name': 'Shoes',
+              'item_id': 'S123',
+              'price': 59.99
+            }
+          ],
+          'event_category': 'Ecommerce',
+          'event_label': 'Purchase',
+          'user_id': 'USER1234',
+          'page_url': window.location.href
+        });
+      }
+
+      // Custom Event Functions with Data Layer Parameters
+      function trackCustomEvent1() {
+        window.dataLayer.push({
+          'event': 'interaction',
+          'product': 'Perfumes',
+          'event_category': 'Product Interaction',
+          'event_label': 'Hovered on Perfumes',
+          'user_id': 'USER1234',
+          'page_url': window.location.href
+        });
+      }
+
+      function trackCustomEvent2() {
+        window.dataLayer.push({
+          'event': 'watch_view',
+          'item': 'Watches',
+          'event_category': 'Product Interaction',
+          'event_label': 'Clicked Show More on Watches',
+          'user_id': 'USER1234',
+          'page_url': window.location.href
+        });
+      }
+
+      function trackCustomEvent3() {
+        window.dataLayer.push({
+          'event': 'focus_input',
+          'interaction': 'focus_input',
+          'event_category': 'Form Interaction',
+          'event_label': 'Input Focused',
+          'user_id': 'USER1234',
+          'page_url': window.location.href
+        });
+      }
+
+      function trackCustomEvent4() {
+        window.dataLayer.push({
+          'event': 'add_to_fav',
+          'product_name': 'Perfumes',
+          'action': 'add_to_cart',
+          'event_category': 'Ecommerce',
+          'event_label': 'Added Perfumes to Cart',
+          'user_id': 'USER1234',
+          'page_url': window.location.href
+        });
+      }
+
+      function trackCustomEvent5() {
+        window.dataLayer.push({
+          'event': 'custom',
+          'interaction': 'click_header',
+          'event_category': 'Page Interaction',
+          'event_label': 'Clicked on Header',
+          'user_id': 'USER1234',
+          'page_url': window.location.href
+        });
+      }
+
+      // New Standard Event Functions with Data Layer Parameters
+      function trackSignup() {
+        window.dataLayer.push({
+          'event': 'signup',
+          'event_category': 'User Interaction',
+          'event_label': 'Sign Up Button Clicked',
+          'user_id': 'USER1234',
+          'page_url': window.location.href
+        });
+      }
+
+      function trackSearch() {
+        var search_term = document.getElementById('search_box').value;
+        window.dataLayer.push({
+          'event': 'search',
+          'search_term': search_term,
+          'event_category': 'Search',
+          'event_label': 'User Search',
+          'user_id': 'USER1234',
+          'page_url': window.location.href
+        });
+      }
+
+      function trackLead() {
+        window.dataLayer.push({
+          'event': 'lead',
+          'lead_type':'Registered',
+          'event_category': 'User Interaction',
+          'event_label': 'Lead Form Submitted',
+          'user_id': 'USER1234',
+          'page_url': window.location.href
+        });
+      }
+      function trackWatch() {
+        window.dataLayer.push({
+          'event': 'watchvideo',
+          'video_title': 'Song Video',
+          'user_id': 'USER1234',
+          'page_url': 'https://www.youtube.com/embed/tgbNymZ7vqY'
+        });
+      }
+
+      function trackInitiateCheckout() {
+        window.dataLayer.push({
+          'event': 'initiate_checkout',
+          'event_category': 'Ecommerce',
+          'event_label': 'Checkout Started',
+          'user_id': 'USER1234',
+          'page_url': window.location.href,
+          'order_id': '1210',
+          'value':'34',
+          'order_quantity':1,
+          'currency':'INR'
+        });
+      }
+
+      function trackViewCategory() {
+        window.dataLayer.push({
+          'event': 'view_category',
+          'category_name': 'Winter Collection',
+          'event_category': 'Product Interaction',
+          'event_label': 'Viewed Category: Winter Collection',
+          'user_id': 'USER1234',
+          'page_url': window.location.href
+        });
+      }
+
+      function trackContact() {
+        window.dataLayer.push({
+          'event': 'contact',
+          'event_category': 'User Interaction',
+          'event_label': 'Contact Button Clicked',
+          'user_id': 'USER1234',
+          'page_url': window.location.href
+        });
+      }
+
+      window.onload = trackPageView;
+    </script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQZ5PWVQ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="top">
+      <div class="container spaces">
+          <h1 class="primary-text" onclick="trackCustomEvent5()">Get Collections of best in class MEN's clothing</h1>
+          <p class="para1">Never go out of class and style by shopping with Mr.Clothing with best in class wardrobe collection for MEN!</p>
+          <button class="purchase" onclick="trackPurchase()">Purchase</button>
+          <input type="text" id="search_box" onfocus="trackCustomEvent3()" placeholder="Search here...">
+          <button onclick="trackSearch()">Search</button> <!-- Standard Event: Search -->
+          <button onclick="trackSignup()">Sign Up</button> <!-- Standard Event: Signup -->
+          <button onclick="trackLead()">Lead Button</button> <!-- Standard Event: Signup -->
+      </div>
+  </header>
+
+  <main>
+     <section class="wardrobe">
+         <div class="container">
+             <h2 class="sec-title">Wardrobe</h2>
+             <div class="segregate">
+                 <a href="#" class="wardrobe_items" onclick="trackViewCategory()"> <!-- Standard Event: View Category -->
+                     <img class="wall" src="stock.jpg" alt="clothes on wall" onmouseover="viewCon()" class="wardrobe_img">
+                     <p class="wardrobe_details">Travelling Outfits</p>
+                 </a>
+                 <a href="#" class="wardrobe_items">
+                    <img src="wardrobecollecction.jpg" alt="orange jackets" class="wardrobe_img">
+                    <p class="wardrobe_details">Winter Collection</p>
+                  </a>
+                  <a href="#" class="wardrobe_items">
+                      <img src="product.jpg" alt="checks blazer" class="wardrobe_img" onmouseover="viewCon()">
+                      <p class="wardrobe_details">Office Wears</p>
+                  </a>
+             </div>
+         </div>
+     </section>
+
+     <section class="buy_products">
+         <div class="container">
+             <h2 class="sec-title">Our Products</h2>
+             <info class="product">
+                 <img src="mens-shoes.jpg" alt="shoes" class="product_img">
+                 <h3 class="product_title">Shoes</h3>
+                 <p class="product_description">Shoes that never goes out style!</p>
+                 <a href="#" class="btn" onclick="AddToCart()">Add To Cart</a>
+             </info>
+
+             <info class="product">
+                 <img src="perfumes.jpg" alt="perfumes" class="product_img" onmouseover="trackCustomEvent1()"> <!-- Custom Event: Hover on Perfumes -->
+                 <h3 class="product_title">Perfumes</h3>
+                 <p class="product_description">The perfumes will make you noticed!</p>
+                 <a href="#" class="btn" onclick="trackCustomEvent4()">Add To Fav</a> <!-- Custom Event: Add Perfumes to Cart -->
+             </info>
+
+             <info class="product">
+                 <img src="watch-cases.jpg" alt="watch-cases" class="product_img">
+                 <h3 class="product_title">Watches</h3>
+                 <p class="product_description">Time to make a difference!</p>
+                 <a href="#" class="btn" onclick="trackCustomEvent2()">Show more...</a> <!-- Custom Event: Click on Watches Show More -->
+             </info>
+             <button onclick="trackInitiateCheckout()">Checkout</button> <!-- Standard Event: Signup -->
+             <div>
+              <button onclick="trackWatch()">Play</button>
+              </div>
+         </div>
+     </section>
+
+     <section>
+       <div class="container">
+         <button class="contact" onclick="trackContact()">Contact Us</button> <!-- Standard Event: Contact -->
+       </div>
+     </section>
+  </main>
+
+</body>
+</html>
